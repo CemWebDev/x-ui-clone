@@ -19,7 +19,7 @@ const Search = () => {
 
   return (
     <div
-      className="sticky top-0 bg-black min-h-8 h-[53px] mb-3 flex items-center w-full"
+      className="sticky top-0 z-50 bg-black min-h-8 h-[53px] mb-3 flex items-center w-full"
       ref={ref}
     >
       <label className="bg-[#202327] flex w-full rounded-full h-[44px] group relative focus-within:bg-black border border-transparent focus-within:border-blue-500">
