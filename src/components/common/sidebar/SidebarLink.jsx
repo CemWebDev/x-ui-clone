@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import MorePopover from "./MorePopover";
 
-const SidebarLink = ({ text, icon: Icon, notification }) => {
+const SidebarLink = ({ text, icon: Icon, notification, path }) => {
   if (text === "More") {
     return (
       <li className="w-full">
@@ -12,7 +12,7 @@ const SidebarLink = ({ text, icon: Icon, notification }) => {
   }
   return (
     <li className="w-full">
-      <NavLink className="block group">
+      <NavLink className="block group" {...(path ? { to: path } : {})}>
         <div className="inline-flex items-center gap-4 group-hover:bg-neutral-800/70 rounded-full p-2.5 transition-colors relative">
           <div className="relative">
             {notification && (
@@ -33,6 +33,7 @@ SidebarLink.propTypes = {
   text: PropTypes.string.isRequired,
   icon: PropTypes.elementType.isRequired,
   notification: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  path: PropTypes.string,
 };
 
 export default SidebarLink;

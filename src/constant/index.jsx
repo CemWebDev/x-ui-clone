@@ -20,17 +20,20 @@ export const sidebarLinks = [
     id: 1,
     icon: FaHouse,
     text: "Home",
+    path: "/",
   },
   {
     id: 2,
     icon: FaSearch,
     text: "Explore",
+    path: "/explore",
   },
   {
     id: 3,
     icon: FaBell,
     text: "Notifications",
     notification: 3,
+    path: "/notifications",
   },
   {
     id: 4,
