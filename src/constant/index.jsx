@@ -107,6 +107,7 @@ export const morePopoverLinks = [
     id: 7,
     icon: FaCog,
     text: "Settings and Privacy",
+    path: "/settings"
   },
 ];
 
@@ -166,4 +167,73 @@ export const trendTopics = [
     title: "Bitcoin Price Surge",
     posts: 9587,
   },
+];
+
+export const whoToFollow = [
+  {
+    id: 1,
+    username: "cemwebdev.com",
+    fullName: "CemWebDev",
+    avatar:
+      "https://fastly.picsum.photos/id/830/100/100.jpg?hmac=OR3tgiXGeiyB2_hcTonA43nlYWGy8qXPBuKWIu114so",
+  },
+  {
+    id: 2,
+    username: "cemwebdev.com",
+    fullName: "CemWebDev",
+    avatar:
+      "https://fastly.picsum.photos/id/823/100/100.jpg?hmac=rrXXdm-D50pC_p2q92_pCEdzuWbfC4iUTbZ-VyD-rUk",
+    verified: true,
+  },
+  {
+    id: 3,
+    username: "cemwebdev.com",
+    fullName: "CemWebDev",
+    avatar:
+      "https://fastly.picsum.photos/id/156/100/100.jpg?hmac=W2gdtalDBjTq0AEJwUyKNN0QwlSCOL1RnR0XS3G_uAE",
+  },
+];
+
+export const trendsFooterLinks = [
+  {
+    id: 1,
+    text: "Terms of Service",
+    path: "/explore",
+  },
+  {
+    id: 2,
+    text: "Privacy Policy",
+    path: "/",
+  },
+  {
+    id: 3,
+    text: "Cookie Policy",
+    path: "/",
+  },
+  {
+    id: 4,
+    text: "Imprint",
+    path: "/",
+  },
+  {
+    id: 5,
+    text: "Accessibility",
+    path: "/",
+  },
+  {
+    id: 6,
+    text: "Ads info",
+    path: "/",
+  },
+  {
+    id: 7,
+    text: "More...",
+  },
+];
+
+export const footerPopoverLinks = [
+  { id: 1, text: "About", path: "/" },
+  { id: 2, text: "Download the X app", path: "/" },
+  { id: 3, text: "X for business", path: "/" },
+  { id: 4, text: "Developers", path: "/" },
 ];
