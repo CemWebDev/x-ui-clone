@@ -8,7 +8,7 @@ import { FaFeather } from "react-icons/fa";
 
 const Sidebar = () => {
   return (
-    <aside className="min-h-screen sticky top-0 max-h-screen flex flex-col w-20 xl:w-64 pl-3 pr-4">
+    <aside className="min-h-screen sticky top-0 max-h-screen flex flex-col w-20 xl:w-64 pl-3 pr-4 z-50">
       <div className="mt-3 text-3xl pl-2.5">
         <NavLink to="/">
           <FaXTwitter />
