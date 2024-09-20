@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import SidebarLink from "./SidebarLink";
 import Button from "../../UI/Button";
 import Profile from "./Profile";
+import { FaFeather } from "react-icons/fa";
 
 const Sidebar = () => {
   return (
@@ -18,7 +19,12 @@ const Sidebar = () => {
           <SidebarLink key={link.id} {...link} />
         ))}
       </ul>
-      <Button size="large">Post</Button>
+      <Button size="large">
+        <span className="hidden 2xl:block">Post</span>
+        <span className="block 2xl:hidden">
+          <FaFeather />
+        </span>
+      </Button>
       <Profile />
     </aside>
   );
