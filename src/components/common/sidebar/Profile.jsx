@@ -22,7 +22,7 @@ const Profile = () => {
           </div>
           <PiDotsThreeCircle className="hidden xl:block text-xl" />
         </PopoverButton>
-        <PopoverPanel className="absolute bottom-10 z-20 w-[300px] left-0 bg-black border shadow-sm shadow-white border-neutral-800/70 rounded-xl py-3">
+        <PopoverPanel className="absolute bottom-10 z-20 w-[300px] left-0 bg-black shadow-box-shadow rounded-xl py-3">
           <button className="py-2 hover:bg-neutral-800/70 w-full transition-colors">
             Add an existing account
           </button>

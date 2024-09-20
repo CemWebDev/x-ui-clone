@@ -49,7 +49,7 @@ const Search = () => {
         {tooltip && (
           <div
             ref={tooltipRef}
-            className="bg-black absolute overflow-hidden top-full w-full shadow-md border border-neutral-600/70 min-h-[100px] max-h-48 rounded-lg shadow-neutral-600/70 py-5 px-4"
+            className="bg-black absolute overflow-hidden top-full w-full min-h-[100px] max-h-48 rounded-lg shadow-box-shadow py-5 px-4"
           >
             <p className="text-sm text-neutral-400/80">
               {value ? (

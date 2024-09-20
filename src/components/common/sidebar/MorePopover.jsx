@@ -12,7 +12,7 @@ const MorePopover = ({ icon: Icon }) => {
           <span className="hidden xl:block text-xl">More</span>
         </div>
       </PopoverButton>
-      <PopoverPanel className="absolute overflow-hidden flex flex-col items-center w-[318px] bottom-4 z-20 left-0 bg-black rounded-xl border border-neutral-400/50 shadow-sm shadow-white">
+      <PopoverPanel className="absolute overflow-hidden flex flex-col items-center w-[318px] bottom-4 z-20 left-0 bg-black rounded-xl shadow-box-shadow">
         {morePopoverLinks.map((link) => (
           <PopoverPanelContent key={link.id} {...link} />
         ))}
