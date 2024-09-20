@@ -9,8 +9,8 @@ const Button = ({ size, variant, children, className, ...props }) => {
       "p-4 h-14 w-full xl:w-[90%] w-[52px] xl:w-auto text-lg": size === "large",
       "bg-blue-500 hover:bg-blue-600 text-white": variant === "primary",
       "text-black bg-white hover:bg-gray-200": variant === "white",
-      "bg-transparent border-gray-200 ": variant === "follow-outline",
-      "flex items-center border border-transparent justify-center rounded-full font-semibold transition-colors": true,
+      "bg-transparent border border-gray-200": variant === "follow-outline",
+      "flex items-center justify-center rounded-full font-semibold transition-colors": true,
     },
     className
   );
