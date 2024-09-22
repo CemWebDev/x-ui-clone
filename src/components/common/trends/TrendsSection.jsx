@@ -7,32 +7,38 @@ import { PiSmileySadThin } from "react-icons/pi";
 
 const TrendsSection = () => {
   return (
-    <div className="w-full border border-neutral-800/70 pt-4 rounded-2xl mt-4 overflow-hidden">
-      <h1 className="pl-4  mb-1.5 font-semibold text-lg">Trends for you</h1>
+    <div className="w-full border border-neutral-500/50 bg-[color:var(--background-primary)] pt-4 rounded-2xl mt-4 overflow-hidden">
+      <h1 className="pl-4 text-[color:var(--text-color)] mb-1.5 font-semibold text-lg">
+        Trends for you
+      </h1>
       {trendTopics.map((topic) => (
         <button
           key={topic.id}
-          className="w-full flex items-start justify-between px-4 py-2 hover:bg-neutral-800/70 transition-colors"
+          className="w-full flex items-start justify-between px-4 py-2 hover-effect transition-colors"
         >
           <div className="flex flex-col items-start">
-            <span className="text-xs text-neutral-500">{topic.category}</span>
-            <span className="text-sm">#{topic.title}</span>
-            <span className="text-xs text-neutral-500">
+            <span className="text-xs text-[color:var(--text-color-secondary)]">
+              {topic.category}
+            </span>
+            <span className="text-sm font-semibold text-[color:var(--text-color)]">
+              #{topic.title}
+            </span>
+            <span className="text-xs text-[color:var(--text-color-secondary)]">
               {numberFormat(topic.posts)} posts
             </span>
           </div>
-          <Popover className="relative">
+          <Popover className="relative text-[color:var(--text-color)]">
             <PopoverButton>
-              <PiDotsThreeCircle className="text-xl hover:text-blue-500 transition-colors" />
+              <PiDotsThreeCircle className="text-xl hover:text-[color:var(--color-primary)] transition-colors" />
             </PopoverButton>
-            <PopoverPanel className="absolute bg-black top-0 z-40 right-0 min-w-[300px] shadow-box-shadow rounded-xl ">
+            <PopoverPanel className="absolute bg-[color:var(--background-primary)] top-0 z-40 right-0 min-w-[300px] shadow-box-shadow rounded-xl ">
               <button className="w-full flex items-center px-2.5 py-2">
-                <PiSmileySadThin className="text-2xl" />
-                <p className="flex-1 text-[15px]">Not interested in this</p>
+                <PiSmileySadThin className="text-2xl mr-2.5" />
+                <p className="text-[15px]">Not interested in this</p>
               </button>
               <button className="w-full flex items-center px-2.5 py-2">
-                <PiSmileySadThin className="text-2xl" />
-                <p className="flex-1 text-[15px]">
+                <PiSmileySadThin className="text-2xl mr-2.5" />
+                <p className="text-[15px]">
                   This trend is harmful or spammy
                 </p>
               </button>
@@ -40,7 +46,7 @@ const TrendsSection = () => {
           </Popover>
         </button>
       ))}
-      <NavLink className="text-blue-500 block px-4 mt-2 text-sm py-2.5 hover:bg-neutral-800/70 text-start">
+      <NavLink className="text-[color:var(--color-primary)] block px-4 mt-2 text-sm py-2.5 hover-effect text-start">
         Show more
       </NavLink>
     </div>
