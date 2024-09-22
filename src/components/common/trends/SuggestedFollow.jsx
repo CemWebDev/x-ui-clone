@@ -24,13 +24,15 @@ const SuggestedFollow = ({ user }) => {
         <NavLink className="flex items-center gap-2 flex-1">
           <img src={user.avatar} alt="" className="rounded-full w-9 h-9" />
           <div className="text-sm flex flex-col items-start">
-            <span className="leading-5 text-white hover:underline flex items-center">
+            <span className="leading-5 text-[color:var(--text-color)] hover:underline flex items-center">
               {user.fullName}
               {user?.verified && (
                 <RiVerifiedBadgeFill className="text-blue-500 text-lg ml-0.5" />
               )}
             </span>
-            <span className="text-neutral-400/60">{user.username}</span>
+            <span className="text-[color:var(--text-color-secondary)]">
+              {user.username}
+            </span>
           </div>
         </NavLink>
         {follow ? (
@@ -44,7 +46,7 @@ const SuggestedFollow = ({ user }) => {
             <span className="hidden group-hover:block">Unfollow</span>
           </Button>
         ) : (
-          <Button size="small" variant="white" onClick={handleFollowToggle}>
+          <Button size="small" variant="basic" onClick={handleFollowToggle}>
             Follow
           </Button>
         )}
