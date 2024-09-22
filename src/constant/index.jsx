@@ -7,13 +7,22 @@ import {
   FaRegBookmark,
   FaMoneyBill1,
 } from "react-icons/fa6";
-import { FaSearch, FaUser, FaMicrophone, FaCog } from "react-icons/fa";
+import {
+  FaSearch,
+  FaUser,
+  FaMicrophone,
+  FaCog,
+  FaPaintBrush,
+} from "react-icons/fa";
 import { IoPeople } from "react-icons/io5";
 import { BsLightning } from "react-icons/bs";
-import { PiDotsThreeCircle } from "react-icons/pi";
+import { PiDotsThreeCircle, PiPersonSimpleCircleLight } from "react-icons/pi";
 import { RiFileListLine } from "react-icons/ri";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import { MdBusinessCenter } from "react-icons/md";
+import { IoEyeOff } from "react-icons/io5";
+import { BiWorld } from "react-icons/bi";
+import { RiBarChartFill } from "react-icons/ri";
 
 export const sidebarLinks = [
   {
@@ -107,7 +116,7 @@ export const morePopoverLinks = [
     id: 7,
     icon: FaCog,
     text: "Settings and Privacy",
-    path: "/settings"
+    path: "/settings",
   },
 ];
 
@@ -236,4 +245,64 @@ export const footerPopoverLinks = [
   { id: 2, text: "Download the X app", path: "/" },
   { id: 3, text: "X for business", path: "/" },
   { id: 4, text: "Developers", path: "/" },
+];
+
+export const settingsLinks = [
+  { id: 1, text: "Your account", href: null },
+  { id: 2, text: "Monetization", href: null },
+  { id: 3, text: "Premium", href: null },
+  { id: 4, text: "Creator Subscriptions", href: null },
+  { id: 5, text: "Security and account access", href: null },
+  { id: 6, text: "Privacy and safety", href: null },
+  { id: 7, text: "Notifications", href: null },
+  { id: 8, text: "Accessibility, display, and languages", href: "display" },
+  { id: 9, text: "Additional resources", href: null },
+  { id: 10, text: "Help Center", href: null },
+];
+
+export const displayLinks = [
+  {
+    id: 1,
+    title: "Accessibility",
+    subtitle:
+      "Manage aspects of your X experience such as limiting color contrast and motion.",
+    icon: IoEyeOff,
+  },
+  {
+    id: 2,
+    title: "Display",
+    subtitle:
+      "Manage your font size, color, and background. These settings affect all the X accounts on this browser.",
+    icon: FaPaintBrush,
+    path: "appearance",
+  },
+  {
+    id: 3,
+    title: "Languages",
+    subtitle:
+      "Manage which languages are used to personalize your X experience.",
+    icon: BiWorld,
+  },
+  {
+    id: 4,
+    title: "Data usage",
+    subtitle:
+      "Limit how X uses some of your network data. These settings affect all the X accounts on this browser.",
+    icon: RiBarChartFill,
+  },
+  {
+    id: 5,
+    title: "Keyboard shortcuts",
+    subtitle: "Learn the available keyboard shortcuts for easier navigation.",
+    icon: PiPersonSimpleCircleLight,
+  },
+];
+
+export const colors = [
+  "#3b82f6",
+  "#ffd440",
+  "#f91880",
+  "#7856ff",
+  "#ff7a00",
+  "#00ba7c",
 ];
