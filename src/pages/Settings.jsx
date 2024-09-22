@@ -59,7 +59,7 @@ const Settings = () => {
           )}
         </div>
       </section>
-      <section className="">
+      <section>
         <Outlet />
       </section>
     </div>
