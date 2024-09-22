@@ -1,15 +1,25 @@
 import PropTypes from "prop-types";
 import classNames from "classnames";
+import { useSelector } from "react-redux";
 
 const Button = ({ size, variant, children, className, ...props }) => {
+  const theme = useSelector((state) => state.appearance);
+
   const buttonClass = classNames(
     {
       "px-4 h-8 text-sm": size === "small",
       "px-4 h-9 text-sm": size === "normal",
       "p-4 h-14 w-full xl:w-[90%] w-[52px] xl:w-auto text-lg": size === "large",
-      "bg-blue-500 hover:bg-blue-600 text-white": variant === "primary",
-      "text-black bg-white hover:bg-gray-200": variant === "white",
-      "bg-transparent border border-gray-200": variant === "follow-outline",
+      "bg-[color:var(--color-primary)] text-white": variant === "primary",
+
+      "bg-white text-black hover:bg-gray-200":
+        variant === "basic" && theme.backgroundColor.name !== "light",
+
+      "bg-black text-white hover:bg-gray-800":
+        variant === "basic" && theme.backgroundColor.name === "light",
+
+      "bg-transparent border border-gray-200 text-[color:var(--text-color)]":
+        variant === "follow-outline",
       "flex items-center justify-center rounded-full font-semibold transition-colors": true,
     },
     className
