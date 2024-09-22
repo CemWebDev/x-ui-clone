@@ -16,10 +16,6 @@ const Root = () => {
       "--background-secondary",
       appearance.backgroundColor.secondary
     );
-    document.documentElement.style.setProperty(
-      "--background-third",
-      appearance.backgroundColor.third
-    );
 
     document.documentElement.style.setProperty(
       "--color-primary",
@@ -40,7 +36,6 @@ const Root = () => {
       "--font-size",
       appearance.fontSize + "px"
     );
-
   }, [appearance]);
 
   const location = useLocation();

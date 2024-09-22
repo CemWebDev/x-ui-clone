@@ -5,7 +5,6 @@ const initialState = {
     name: "dark",
     primary: "#000",
     secondary: "#202327",
-    third: "#273340",
   },
   color: {
     primary: "#3b82f6",
