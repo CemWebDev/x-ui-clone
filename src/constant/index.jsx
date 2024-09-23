@@ -56,6 +56,11 @@ export const sidebarLinks = [
   },
   {
     id: 6,
+    icon: FaRegBookmark,
+    text: "Bookmarks",
+  },
+  {
+    id: 6,
     icon: IoPeople,
     text: "Communities",
   },
@@ -299,10 +304,30 @@ export const displayLinks = [
 ];
 
 export const colors = [
-  "#3b82f6",
-  "#ffd440",
-  "#f91880",
-  "#7856ff",
-  "#ff7a00",
-  "#00ba7c",
+  {
+    primary: "#3b82f6",
+    secondary: "#8ecdf8",
+  },
+  {
+    primary: "#ffd400",
+    secondary: "#ffea80",
+  },
+  {
+    primary: "#f91880",
+    secondary: "#fc8cc0",
+  },
+  {
+    primary: "#7856ff",
+    secondary: "#bcabff",
+  },
+  {
+    primary: "#ff7a00",
+    secondary: "#ffbd80",
+  },
+  {
+    primary: "#00ba7c",
+    secondary: "#80ddbe",
+  },
 ];
+
+export const fontSizes = [14, 15, 16, 17, 18];
