@@ -12,7 +12,7 @@ const initialState = {
     textColor: "#e7e9ea",
     textColorSecondary: "rgb(113, 118, 123)",
   },
-  fontSize: 16,
+  fontSize: 15,
 };
 
 const loadTheme = () => {
