@@ -6,7 +6,7 @@ const ThemeButton = ({ label, backgroundColor, active, onClick }) => {
   return (
     <button
       className={classNames(
-        "border-2 border-transparent rounded h-16 px-5 group flex items-center gap-1.5",
+        "border-[2px] border-transparent rounded h-[62px] px-[20px] group flex font-semibold items-center gap-1.5",
         {
           "!border-[color:var(--color-primary)]": active,
         },
@@ -18,10 +18,10 @@ const ThemeButton = ({ label, backgroundColor, active, onClick }) => {
       )}
       onClick={onClick}
     >
-      <div className="w-10 h-10 rounded-full group-hover:bg-white/10 transition-colors flex items-center justify-center flex-shrink-0">
+      <div className="w-[40px] h-[40px] rounded-full group-hover:bg-white/10 transition-colors flex items-center justify-center flex-shrink-0">
         <div
-          className={`w-5 h-5 rounded-full flex items-center justify-center ${
-            active ? "bg-[var(--color-primary)]" : "border-2 border-neutral-300"
+          className={`w-[20px] h-[20px] rounded-full flex items-center justify-center ${
+            active ? "bg-[var(--color-primary)]" : "border-[2px] border-neutral-300"
           } text-white`}
         >
           {active && <IoMdCheckmark />}
