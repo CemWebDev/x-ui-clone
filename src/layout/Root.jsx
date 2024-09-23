@@ -23,6 +23,11 @@ const Root = () => {
     );
 
     document.documentElement.style.setProperty(
+      "--color-secondary",
+      appearance.color.secondary
+    );
+
+    document.documentElement.style.setProperty(
       "--text-color",
       appearance.color.textColor
     );
