@@ -8,6 +8,7 @@ const initialState = {
   },
   color: {
     primary: "#3b82f6",
+    secondary: "#8ecdf8",
     textColor: "#e7e9ea",
     textColorSecondary: "rgb(113, 118, 123)",
   },
