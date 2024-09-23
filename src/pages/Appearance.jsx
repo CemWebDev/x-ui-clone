@@ -1,17 +1,30 @@
 import { IoArrowBack } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 import { useAppearance } from "../store/appearance/hooks";
-import { setColor, setBackgroundColor } from "../store/appearance/actions";
+import {
+  setColor,
+  setBackgroundColor,
+  setFontsize,
+} from "../store/appearance/actions";
 import ThemeButton from "../components/UI/ThemeButton";
 import { themes } from "../themes";
-import { colors } from "../constant";
+import { colors, fontSizes } from "../constant";
 import { IoMdCheckmark } from "react-icons/io";
+import { useState } from "react";
 
 const Appearance = () => {
-  const { backgroundColor, color } = useAppearance();
+  const { backgroundColor, color, fontSize } = useAppearance();
+  const [selectedFontSizeIndex, setSelectedFontSizeIndex] = useState(
+    fontSizes.indexOf(fontSize)
+  );
+
+  const handleFontSizeChange = (index) => {
+    setSelectedFontSizeIndex(index);
+    setFontsize(fontSizes[index]);
+  };
 
   return (
-    <section>
+    <section className="border-r lg:border-transparent border-neutral-500/50 min-h-screen">
       <div className="pt-2 pl-4">
         <h1 className="flex items-center gap-10 text-xl text-[color:var(--text-color)]">
           <NavLink
@@ -30,12 +43,49 @@ const Appearance = () => {
           all the X accounts on this browser.
         </p>
       </div>
+
       <div className="mt-10">
         <h1 className="border-y">
           <div className="p-3">
             <h1 className="text-lg font-semibold text-[color:var(--text-color)]">
               Font size
             </h1>
+            <div className="flex items-center">
+              <div className="text-[0.813rem] font-light text-[color:var(--text-color)]">
+                Aa
+              </div>
+
+              <div className="relative flex items-center justify-between w-full max-w-md mx-auto my-4">
+                <div className="absolute top-1/2 left-0 rounded-full overflow-hidden right-0 h-1 bg-[--color-secondary] -translate-y-1/2" />
+                <div
+                  className="absolute rounded-full top-1/2 left-0 h-1 bg-[--color-primary] -translate-y-1/2"
+                  style={{
+                    width: `${
+                      (selectedFontSizeIndex / (fontSizes.length - 1)) * 100
+                    }%`,
+                  }}
+                />
+                {fontSizes.map((_, index) => (
+                  <div
+                    key={index}
+                    onClick={() => handleFontSizeChange(index)}
+                    className="flex items-center mx-2 justify-center"
+                  >
+                    <button
+                      key={index}
+                      className={`relative w-4 h-4 rounded-full ${
+                        index <= selectedFontSizeIndex
+                          ? "bg-[--color-primary]"
+                          : "bg-[--color-secondary]"
+                      }`}
+                    />
+                  </div>
+                ))}
+              </div>
+              <div className="text-[1.25rem] font-light text-[color:var(--text-color)]">
+                Aa
+              </div>
+            </div>
           </div>
         </h1>
       </div>
@@ -45,22 +95,22 @@ const Appearance = () => {
             Colors
           </h1>
           <div className="mt-3 grid grid-cols-3 gap-2 sm:grid-cols-6 place-items-center">
-            {colors.map((buttonBackgroundColor, index) => (
+            {colors.map((colors, index) => (
               <div
                 key={index}
                 className="w-12 h-12 rounded-full flex items-center justify-center hover:ring-2 hover:ring-neutral-600 transition-all"
               >
                 <button
-                  style={{ "--bg": buttonBackgroundColor }}
-                  className="w-10 h-10 rounded-full bg-[color:var(--bg)] flex items-center justify-center text-white text-xl"
+                  style={{ "--bg": colors.primary }}
+                  className="w-[40px] h-[40px] rounded-full bg-[color:var(--bg)] flex items-center justify-center text-white text-xl"
                   onClick={() => {
                     setColor({
                       ...color,
-                      primary: buttonBackgroundColor,
+                      ...colors,
                     });
                   }}
                 >
-                  {color.primary === buttonBackgroundColor && <IoMdCheckmark />}
+                  {color.primary === colors.primary && <IoMdCheckmark />}
                 </button>
               </div>
             ))}
@@ -90,7 +140,6 @@ const Appearance = () => {
                     name: theme.name,
                     primary: theme.backgroundPrimary,
                     secondary: theme.backgroundSecondary,
-                    third: "#273340",
                   };
                   setColor(newColor);
                   setBackgroundColor(newBackgroundColor);
