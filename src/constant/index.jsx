@@ -6,6 +6,14 @@ import {
   FaXTwitter,
   FaRegBookmark,
   FaMoneyBill1,
+  FaEarthAfrica,
+  FaUserPlus,
+  FaListUl,
+  FaBan,
+  FaChartLine,
+  FaCode,
+  FaFlag,
+  FaCommentDots,
 } from "react-icons/fa6";
 import {
   FaSearch,
@@ -13,17 +21,24 @@ import {
   FaMicrophone,
   FaCog,
   FaPaintBrush,
+  FaRegSmile,
+  FaAt,
+  FaQuestionCircle,
+  FaVolumeMute,
 } from "react-icons/fa";
 import { IoPeople } from "react-icons/io5";
 import { BsLightning } from "react-icons/bs";
 import { PiDotsThreeCircle, PiPersonSimpleCircleLight } from "react-icons/pi";
-import { RiFileListLine } from "react-icons/ri";
+import { RiFileListLine, RiListOrdered2 } from "react-icons/ri";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import { MdBusinessCenter } from "react-icons/md";
 import { IoEyeOff } from "react-icons/io5";
 import { BiWorld } from "react-icons/bi";
 import { RiBarChartFill } from "react-icons/ri";
-
+import { CiImageOn, CiLocationOn } from "react-icons/ci";
+import { HiOutlineGif } from "react-icons/hi2";
+import { LuCalendarClock, LuBadgeCheck } from "react-icons/lu";
+import { FiUserCheck } from "react-icons/fi";
 export const sidebarLinks = [
   {
     id: 1,
@@ -331,3 +346,67 @@ export const colors = [
 ];
 
 export const fontSizes = [14, 15, 16, 17, 18];
+
+export const headerIcons = [
+  { id: 1, icon: <CiImageOn /> },
+  { id: 2, icon: <HiOutlineGif /> },
+  { id: 3, icon: <RiListOrdered2 /> },
+  { id: 4, icon: <FaRegSmile /> },
+  { id: 5, icon: <LuCalendarClock /> },
+  { id: 6, icon: <CiLocationOn /> },
+];
+
+export const replyPopover = [
+  { id: 1, text: "Everyone", icon: FaEarthAfrica },
+  { id: 2, text: "Accounts you follow", icon: FiUserCheck },
+  { id: 3, text: "Verified accounts", icon: LuBadgeCheck },
+  { id: 4, text: "Only accounts you mention", icon: FaAt },
+];
+
+export const postPopoverItems = (username) => [
+  {
+    id: 1,
+    text: "Why this ad?",
+    icon: FaQuestionCircle,
+  },
+  {
+    id: 2,
+    text: `Follow ${username}`,
+    icon: FaUserPlus,
+  },
+  {
+    id: 3,
+    text: `Add/remove ${username} from Lists`,
+    icon: FaListUl,
+  },
+  {
+    id: 4,
+    text: `Mute ${username}`,
+    icon: FaVolumeMute,
+  },
+  {
+    id: 5,
+    text: `Block ${username}`,
+    icon: FaBan,
+  },
+  {
+    id: 6,
+    text: "View post engagements",
+    icon: FaChartLine,
+  },
+  {
+    id: 7,
+    text: "Embed post",
+    icon: FaCode,
+  },
+  {
+    id: 8,
+    text: "Report ad",
+    icon: FaFlag,
+  },
+  {
+    id: 9,
+    text: "Request Community Note",
+    icon: FaCommentDots,
+  },
+];
