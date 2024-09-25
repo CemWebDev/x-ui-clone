@@ -363,6 +363,74 @@ export const replyPopover = [
   { id: 4, text: "Only accounts you mention", icon: FaAt },
 ];
 
+export const mockPosts = [
+  {
+    username: "John Doe",
+    handle: "@john_doe",
+    content:
+      "Morning coffee and a quick workout! ☕💪 #morningroutine #fitness",
+      image: "https://picsum.photos/600/400?random=1",
+    profileImage: "https://i.pravatar.cc/150?img=1",
+    likes: 300,
+    retweets: 150,
+    comments: 29876,
+    views: 1234569,
+    time: "2h",
+    verified: true,
+  },
+  {
+    username: "Sarah Lee",
+    handle: "@sarahlee",
+    content: "Had an amazing weekend hike with friends! 🌲🏞️ #nature #hiking",
+      image: "https://picsum.photos/600/400?random=2",
+    profileImage: "https://i.pravatar.cc/150?img=2",
+    likes: 2200,
+    retweets: 320,
+    comments: 150,
+    views: 123333,
+    time: "5h",
+  },
+  {
+    username: "Mark Jacobs",
+    handle: "@markj",
+    content:
+      "Just finished reading 'The Alchemist'. Highly recommend! 📖✨ #readinglist #bookworm",
+      image: "https://picsum.photos/600/400?random=3",
+    profileImage: "https://i.pravatar.cc/150?img=3",
+    likes: 800,
+    retweets: 120,
+    comments: 12890,
+    views: 12765234,
+    time: "8h",
+    verified: true,
+  },
+  {
+    username: "Emily Clark",
+    handle: "@emilyc",
+    content: "Trying out a new pasta recipe tonight 🍝😋 #foodie #dinnerideas",
+      image: "https://picsum.photos/600/400?random=4",
+    profileImage: "https://i.pravatar.cc/150?img=4",
+    likes: 1900,
+    retweets: 240,
+    comments: 110,
+    views: 4532,
+    time: "10h",
+  },
+  {
+    username: "Daniel King",
+    handle: "@danielking",
+    content:
+      "Caught a beautiful sunset at the beach today 🌅 #sunsetlovers #relax",
+      image: "https://picsum.photos/600/400?random=5",
+    profileImage: "https://i.pravatar.cc/150?img=5",
+    likes: 1300,
+    retweets: 170,
+    comments: 90,
+    views: 30567,
+    time: "12h",
+  },
+];
+
 export const postPopoverItems = (username) => [
   {
     id: 1,
