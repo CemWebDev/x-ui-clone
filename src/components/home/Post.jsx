@@ -6,6 +6,7 @@ import { FaEarthAfrica } from "react-icons/fa6";
 import { useAccount } from "../../store/auth/hooks";
 import Button from "../UI/Button";
 import classNames from "classnames";
+import { useAppearance } from "../../store/appearance/hooks";
 
 const Post = () => {
   const [text, setText] = useState("");
@@ -39,8 +40,18 @@ const Post = () => {
     setReply(choice);
   };
   const account = useAccount();
+  const { fontSize } = useAppearance();
+
   const CurrentIcon =
     replyPopover.find((item) => item.id === reply)?.icon || FaEarthAfrica;
+
+  const getIconClass = (icon) => {
+    const baseClass = "hidden sm:flex";
+    if ((icon.id === 5 || icon.id === 6) && fontSize >= 16) {
+      return `${baseClass}`;
+    }
+    return "";
+  };
 
   return (
     <div className="p-3.5 flex flex-col">
@@ -114,7 +125,8 @@ const Post = () => {
                     icon.id === 6
                       ? "opacity-50 cursor-default"
                       : "hover:bg-[--color-primary-alpha]",
-                    icon.id === 3 ? "hidden md:flex" : ""
+                    icon.id === 3 ? "hidden md:flex" : "",
+                    getIconClass(icon)
                   )}
                 >
                   {icon.icon}
