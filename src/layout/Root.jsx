@@ -23,6 +23,11 @@ const Root = () => {
     );
 
     document.documentElement.style.setProperty(
+      "--color-primary-alpha",
+      appearance.color.primary + "30"
+    );
+
+    document.documentElement.style.setProperty(
       "--color-secondary",
       appearance.color.secondary
     );
@@ -54,7 +59,7 @@ const Root = () => {
     <div className="max-w-screen-xl mx-auto flex font-poppins">
       <Sidebar />
       <div className="flex-1 flex">
-        <main className="flex-1 pt-2 border-neutral-500/50 border-x min-w-0">
+        <main className="flex-1 pt-2 border-neutral-500/50 border-x">
           <Outlet />
         </main>
         {visibleTrendsBar && (
