@@ -1,12 +1,18 @@
 import { useDispatch, useSelector } from "react-redux";
 import { _setActiveTab } from "./index";
 
-export const useTab = () => {
+export const useTab = (context = "main") => {
   const dispatch = useDispatch();
-  const activeTab = useSelector((state) => state.tab.activeTab);
+  const tabs = useSelector((state) => state.tab);
+
+  const activeTab = tabs[context];
 
   const setActiveData = (tab) => {
-    dispatch(_setActiveTab(tab));
+    if (context === "main") {
+      dispatch(_setActiveTab(tab));
+    } else {
+      dispatch(_setActiveTab({ context, tab }));
+    }
   };
 
   return { activeTab, setActiveData };
