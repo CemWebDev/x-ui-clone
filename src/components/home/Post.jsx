@@ -105,7 +105,7 @@ const Post = () => {
           </Popover>
           <div className="w-full h-[0.5px] bg-neutral-500/50 my-3" />
           <div className="flex flex-wrap items-center justify-between">
-            <div className="flex items-center gap-1">
+            <div className="flex flex-wrap items-center gap-1">
               {headerIcons.map((icon) => (
                 <button
                   key={icon.id}
