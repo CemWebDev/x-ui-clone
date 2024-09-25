@@ -8,7 +8,8 @@ const Verified = () => {
       <div className="max-w-96 mx-auto mt-20 p-2">
         <img
           src="https://abs.twimg.com/responsive-web/client-web/verification-check-400x200.v1.46c9cb39.png"
-          alt=""
+          alt="verified tab hero image"
+          loading="lazy"
         />
         <h1 className="text-[--text-color] font-semibold text-xl xl:text-2xl">
           Nothing to see here — <br /> yet

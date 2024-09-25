@@ -369,7 +369,7 @@ export const mockPosts = [
     handle: "@john_doe",
     content:
       "Morning coffee and a quick workout! ☕💪 #morningroutine #fitness",
-      image: "https://picsum.photos/600/400?random=1",
+    image: "https://picsum.photos/600/400?random=1",
     profileImage: "https://i.pravatar.cc/150?img=1",
     likes: 300,
     retweets: 150,
@@ -382,7 +382,7 @@ export const mockPosts = [
     username: "Sarah Lee",
     handle: "@sarahlee",
     content: "Had an amazing weekend hike with friends! 🌲🏞️ #nature #hiking",
-      image: "https://picsum.photos/600/400?random=2",
+    image: "https://picsum.photos/600/400?random=2",
     profileImage: "https://i.pravatar.cc/150?img=2",
     likes: 2200,
     retweets: 320,
@@ -395,7 +395,7 @@ export const mockPosts = [
     handle: "@markj",
     content:
       "Just finished reading 'The Alchemist'. Highly recommend! 📖✨ #readinglist #bookworm",
-      image: "https://picsum.photos/600/400?random=3",
+    image: "https://picsum.photos/600/400?random=3",
     profileImage: "https://i.pravatar.cc/150?img=3",
     likes: 800,
     retweets: 120,
@@ -408,7 +408,7 @@ export const mockPosts = [
     username: "Emily Clark",
     handle: "@emilyc",
     content: "Trying out a new pasta recipe tonight 🍝😋 #foodie #dinnerideas",
-      image: "https://picsum.photos/600/400?random=4",
+    image: "https://picsum.photos/600/400?random=4",
     profileImage: "https://i.pravatar.cc/150?img=4",
     likes: 1900,
     retweets: 240,
@@ -421,7 +421,7 @@ export const mockPosts = [
     handle: "@danielking",
     content:
       "Caught a beautiful sunset at the beach today 🌅 #sunsetlovers #relax",
-      image: "https://picsum.photos/600/400?random=5",
+    image: "https://picsum.photos/600/400?random=5",
     profileImage: "https://i.pravatar.cc/150?img=5",
     likes: 1300,
     retweets: 170,
@@ -476,5 +476,33 @@ export const postPopoverItems = (username) => [
     id: 9,
     text: "Request Community Note",
     icon: FaCommentDots,
+  },
+];
+
+export const notificationData = [
+  {
+    id: 1,
+    username: "John Doe",
+    profileImage: "https://i.pravatar.cc/150?img=1",
+  },
+  {
+    id: 2,
+    username: "Ember Claw",
+    profileImage: "https://i.pravatar.cc/150?img=2",
+  },
+  {
+    id: 3,
+    username: "Tam Frain",
+    profileImage: "https://i.pravatar.cc/150?img=3",
+  },
+  {
+    id: 4,
+    username: "Hester Sek",
+    profileImage: "https://i.pravatar.cc/150?img=4",
+  },
+  {
+    id: 5,
+    username: "Indiana Degrenier",
+    profileImage: "https://i.pravatar.cc/150?img=5",
   },
 ];
