@@ -12,6 +12,8 @@ const initialState = {
     textColor: "#e7e9ea",
     textColorSecondary: "rgb(113, 118, 123)",
   },
+  boxShadow:
+    "rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1px",
   fontSize: 16,
 };
 
@@ -25,7 +27,7 @@ const loadTheme = () => {
 
 const appearance = createSlice({
   name: "appearance",
-  initialState: loadTheme,
+  initialState: loadTheme(),
   reducers: {
     _setBackgroundColor: (state, action) => {
       state.backgroundColor = action.payload;
@@ -35,6 +37,10 @@ const appearance = createSlice({
       state.color = action.payload;
       localStorage.setItem("appearance", JSON.stringify(state));
     },
+    _setBoxShadow: (state, action) => {
+      state.boxShadow = action.payload;
+      localStorage.setItem("appearance", JSON.stringify(state));
+    },
     _setFontSize: (state, action) => {
       state.fontSize = action.payload;
       localStorage.setItem("appearance", JSON.stringify(state));
@@ -42,7 +48,7 @@ const appearance = createSlice({
   },
 });
 
-export const { _setBackgroundColor, _setColor, _setFontSize } =
+export const { _setBackgroundColor, _setColor, _setFontSize, _setBoxShadow } =
   appearance.actions;
 
 export default appearance.reducer;

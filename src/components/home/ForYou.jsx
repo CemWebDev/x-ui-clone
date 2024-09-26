@@ -89,7 +89,7 @@ const ForYou = () => {
                       <PopoverButton className="outline-none">
                         <PiDotsThreeCircle className="text-xl hover:text-[--color-primary] text-[--text-color-secondary]" />
                       </PopoverButton>
-                      <PopoverPanel className="absolute overflow-hidden w-[22.688rem] text-base z-50 right-full rounded-2xl shadow-box-shadow bg-[--background-primary]">
+                      <PopoverPanel className="absolute overflow-hidden w-[22.688rem] text-base z-50 right-full rounded-2xl shadow-box bg-[--background-primary]">
                         <PostPopover username={post.handle} />
                       </PopoverPanel>
                     </Popover>

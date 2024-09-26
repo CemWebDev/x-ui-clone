@@ -7,6 +7,8 @@ import { useAppearance } from "../store/appearance/hooks";
 const Root = () => {
   const appearance = useAppearance();
 
+  console.log(appearance);
+
   useEffect(() => {
     document.documentElement.style.setProperty(
       "--background-primary",
@@ -40,6 +42,11 @@ const Root = () => {
     document.documentElement.style.setProperty(
       "--text-color-secondary",
       appearance.color.textColorSecondary
+    );
+
+    document.documentElement.style.setProperty(
+      "--box-shadow",
+      appearance.boxShadow
     );
 
     document.documentElement.style.setProperty(

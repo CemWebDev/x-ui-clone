@@ -19,3 +19,7 @@ body {
 .group-hover-effect {
   @apply group-hover:bg-neutral-600/40 transition-colors;
 }
+
+.shadow-box {
+  box-shadow: var(--box-shadow);
+}

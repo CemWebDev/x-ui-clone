@@ -20,7 +20,7 @@ const Footer = () => {
             <PopoverButton>
               {link.text}
             </PopoverButton>
-            <PopoverPanel className="absolute -top-48 left-1/2 -translate-x-1/2 bg-[color:var(--background-primary)] w-48 max-w-[24rem] rounded-2xl shadow-box-shadow overflow-hidden">
+            <PopoverPanel className="absolute -top-48 left-1/2 -translate-x-1/2 bg-[color:var(--background-primary)] w-48 max-w-[24rem] rounded-2xl shadow-box overflow-hidden">
               {footerPopoverLinks.map((link) => (
                 <NavLink
                   key={link.id}

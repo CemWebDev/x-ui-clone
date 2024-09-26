@@ -31,7 +31,7 @@ const TrendsSection = () => {
             <PopoverButton>
               <PiDotsThreeCircle className="text-xl hover:text-[color:var(--color-primary)] transition-colors" />
             </PopoverButton>
-            <PopoverPanel className="absolute bg-[color:var(--background-primary)] top-0 z-40 right-0 min-w-[300px] shadow-box-shadow rounded-xl ">
+            <PopoverPanel className="absolute bg-[color:var(--background-primary)] top-0 z-40 right-0 min-w-[300px] shadow-box rounded-xl ">
               <button className="w-full flex items-center px-2.5 py-2">
                 <PiSmileySadThin className="text-2xl mr-2.5" />
                 <p className="text-[15px]">Not interested in this</p>

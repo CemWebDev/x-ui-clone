@@ -5,6 +5,7 @@ import {
   setColor,
   setBackgroundColor,
   setFontsize,
+  setBoxShadow,
 } from "../store/appearance/actions";
 import ThemeButton from "../components/UI/ThemeButton";
 import { themes } from "../themes";
@@ -13,7 +14,7 @@ import { IoMdCheckmark } from "react-icons/io";
 import { useState } from "react";
 
 const Appearance = () => {
-  const { backgroundColor, color, fontSize } = useAppearance();
+  const { backgroundColor, color, fontSize, boxShadow } = useAppearance();
   const [selectedFontSizeIndex, setSelectedFontSizeIndex] = useState(
     fontSizes.indexOf(fontSize)
   );
@@ -143,6 +144,9 @@ const Appearance = () => {
                   };
                   setColor(newColor);
                   setBackgroundColor(newBackgroundColor);
+                  setBoxShadow(
+                    "rgba(101, 119, 134, 0.2) 0px 0px 15px, rgba(101, 119, 134, 0.15) 0px 0px 3px 1px"
+                  );
                 }}
               />
             ))}
