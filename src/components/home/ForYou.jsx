@@ -126,7 +126,7 @@ const ForYou = () => {
           >
             <svg
               aria-hidden="true"
-              className="w-12 h-12 text-[--color-text] animate-spin dark:text-gray-600 fill-[--color-primary]"
+              className="w-12 h-12 text-[--color-secondary] animate-spin fill-[--color-primary]"
               viewBox="0 0 100 101"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
