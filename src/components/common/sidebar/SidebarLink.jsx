@@ -6,8 +6,8 @@ import { useAppearance } from "../../../store/appearance/hooks";
 const SidebarLink = ({ text, icon: Icon, notification, path, id }) => {
   const { fontSize } = useAppearance();
 
-  const shouldHide = (fontSize >= 16 && id === 6) || (fontSize >= 17 && (id === 7 || id === 8));
-
+  const shouldHide =
+    (fontSize >= 15 && id === 6) || (fontSize >= 17 && (id === 7 || id === 8));
 
   if (text === "More") {
     return (

@@ -1,25 +1,57 @@
 import PropTypes from "prop-types";
-import { FaRegComment } from "react-icons/fa";
-import { BiRepost } from "react-icons/bi";
-import { CiHeart } from "react-icons/ci";
-import { RiBarChartFill, RiShare2Line } from "react-icons/ri";
-import { FaRegBookmark } from "react-icons/fa6";
+import {
+  FaRegComment,
+  FaRegHeart,
+  FaChartBar,
+  FaShareSquare,
+  FaHeart,
+} from "react-icons/fa";
+import { FaRegBookmark, FaRetweet } from "react-icons/fa6";
 import { numberFormat } from "../../utils/format";
-import { colors } from "../../constant";
+import { useState } from "react";
 import classNames from "classnames";
 
-const IconWithCount = ({ icon: Icon, count, id }) => {
+const IconWithCount = ({ icon: Icon, count }) => {
+  const [like, setLike] = useState(false);
+
+  const handleClick = () => {
+    if (Icon === FaRegHeart) {
+      setLike((prevLike) => !prevLike);
+    }
+  };
+
   return (
-    <div className="flex items-center gap-0.5">
-      <span
+    <div
+      className="flex items-center gap-px group cursor-pointer"
+      onClick={handleClick}
+    >
+      <div
         className={classNames(
-          "w-6 h-6 flex items-center justify-center rounded-full",
-          
+          "w-8 h-8 rounded-full group-hover:text-[--color-primary] flex items-center justify-center group-hover:bg-[--color-primary-alpha] transition-colors duration-300",
+          Icon === FaRegHeart
+            ? "group-hover:text-pink-600 group-hover:bg-pink-600/35"
+            : ""
         )}
       >
-        <Icon />
+        {Icon === FaRegHeart ? (
+          like ? (
+            <FaHeart className="text-pink-600" />
+          ) : (
+            <FaRegHeart />
+          )
+        ) : (
+          <Icon />
+        )}
+      </div>
+      <span
+        className={classNames(
+          "flex items-center justify-center group-hover:text-[--color-primary] transition-colors duration-300",
+          Icon === FaRegHeart ? " group-hover:text-pink-600" : "",
+          like ? "text-pink-600" : ""
+        )}
+      >
+        {numberFormat(count)}
       </span>
-      {numberFormat(count)}
     </div>
   );
 };
@@ -27,21 +59,22 @@ const IconWithCount = ({ icon: Icon, count, id }) => {
 IconWithCount.propTypes = {
   icon: PropTypes.elementType.isRequired,
   count: PropTypes.number.isRequired,
-  id: PropTypes.number.isRequired,
 };
 
-const PostActions = ({ likes, retweets, comments, views, id }) => {
+const PostActions = ({ likes, retweets, comments, views }) => {
   return (
     <>
-      <IconWithCount icon={FaRegComment} count={comments} id={id} />
-      <IconWithCount icon={BiRepost} count={retweets} id={id} />
-      <IconWithCount icon={CiHeart} count={likes} id={id} />
-      <IconWithCount icon={RiBarChartFill} count={views} id={id} />
-      <div className="flex items-center gap-1">
-        <span className="hidden sm:block">
+      <IconWithCount icon={FaRegComment} count={comments} />
+      <IconWithCount icon={FaRetweet} count={retweets} />
+      <IconWithCount icon={FaRegHeart} count={likes} />
+      <IconWithCount icon={FaChartBar} count={views} />
+      <div className="flex items-center text-sm gap-2 *:cursor-pointer">
+        <span className="hidden sm:flex w-8 h-8 rounded-full hover:text-[--color-primary] items-center justify-center hover:bg-[--color-primary-alpha] transition-colors duration-500">
           <FaRegBookmark />
         </span>
-        <RiShare2Line />
+        <span className="w-8 h-8 rounded-full hover:text-[--color-primary] flex items-center justify-center hover:bg-[--color-primary-alpha] transition-colors duration-500">
+          <FaShareSquare />
+        </span>
       </div>
     </>
   );
@@ -52,7 +85,6 @@ PostActions.propTypes = {
   retweets: PropTypes.number.isRequired,
   comments: PropTypes.number.isRequired,
   views: PropTypes.number.isRequired,
-  id: PropTypes.number.isRequired,
 };
 
 export default PostActions;

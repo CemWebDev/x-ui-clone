@@ -114,7 +114,6 @@ const ForYou = () => {
                 <div className="mt-2 flex-wrap flex items-center text-[--text-color-secondary] text-[.85rem] justify-between gap-1">
                   <PostActions
                     key={post.id}
-                    id={post.id}
                     likes={post.likes}
                     comments={post.comments}
                     views={post.views}
