@@ -20,7 +20,7 @@ const SearchBar = ({ popoverContent, inputPlaceholder }) => {
 
   return (
     <div
-      className="sticky top-0 z-40 bg-[color:var(--background-primary)] min-h-8 h-[53px] mb-3 flex items-center w-full"
+      className="sticky top-0 z-50 bg-[color:var(--background-primary)] min-h-8 h-[53px] mb-3 flex items-center w-full"
       ref={ref}
     >
       <label className="bg-[color:var(--background-secondary)] flex w-full rounded-full h-[44px] group relative focus-within:bg-[color:var(--background-primary)] border border-transparent focus-within:border-[color:var(--color-primary)]">
