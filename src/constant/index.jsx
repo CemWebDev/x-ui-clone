@@ -375,7 +375,7 @@ export const mockPosts = [
     retweets: 150,
     comments: 29876,
     views: 1234569,
-    time: "2h",
+    time: 120,
     verified: true,
   },
   {
@@ -388,7 +388,7 @@ export const mockPosts = [
     retweets: 320,
     comments: 150,
     views: 123333,
-    time: "5h",
+    time: 235,
   },
   {
     username: "Mark Jacobs",
@@ -401,7 +401,7 @@ export const mockPosts = [
     retweets: 120,
     comments: 12890,
     views: 12765234,
-    time: "8h",
+    time: 845,
     verified: true,
   },
   {
@@ -414,7 +414,7 @@ export const mockPosts = [
     retweets: 240,
     comments: 110,
     views: 4532,
-    time: "10h",
+    time: 210,
   },
   {
     username: "Daniel King",
@@ -427,7 +427,7 @@ export const mockPosts = [
     retweets: 170,
     comments: 90,
     views: 30567,
-    time: "12h",
+    time: 2345,
   },
 ];
 

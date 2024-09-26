@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import PostActions from "./PostActions";
 import PostPopover from "./PostPopover";
 import { mockPosts } from "../../constant";
+import { relativeTimeFormat } from "../../utils/format";
 
 const ForYou = () => {
   const [posts, setPosts] = useState([...mockPosts]);
@@ -83,6 +84,12 @@ const ForYou = () => {
                       )}
                       <span className="text-[--text-color-secondary] text-sm">
                         {post.handle}
+                      </span>
+                      <span className="text-[--text-color-secondary]">
+                        &bull;
+                      </span>
+                      <span className="ml-1 text-xs text-[--text-color-secondary]">
+                        {relativeTimeFormat(post.time)}
                       </span>
                     </Link>
                     <Popover className="relative">
