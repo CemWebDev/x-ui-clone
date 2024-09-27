@@ -2,7 +2,7 @@ import Header from "../components/explore/Header"
 
 const Explore = () => {
   return (
-    <section className="-mt-2 min-h-screen">
+    <section className="header-layout">
       <Header />
     </section>
   )

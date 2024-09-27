@@ -23,3 +23,7 @@ body {
 .shadow-box {
   box-shadow: var(--box-shadow);
 }
+
+.header-layout {
+  @apply -mt-2 min-h-screen;
+}

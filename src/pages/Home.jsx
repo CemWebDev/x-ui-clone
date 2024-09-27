@@ -7,7 +7,7 @@ import Post from "../components/home/Post";
 
 const Home = () => {
   return (
-    <section className="min-h-screen -mt-2">
+    <section className="header-layout">
       <Header />
       <Post />
       <ForYou />

@@ -5,7 +5,7 @@ import Verified from "../components/notifications/Verified";
 
 const Notifications = () => {
   return (
-    <section className="-mt-2">
+    <section className="header-layout">
       <Header />
       <Verified />
       <Mention />
