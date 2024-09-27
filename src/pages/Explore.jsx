@@ -1,8 +1,10 @@
-
+import Header from "../components/explore/Header"
 
 const Explore = () => {
   return (
-    <div>Explore</div>
+    <section className="-mt-2 min-h-screen">
+      <Header />
+    </section>
   )
 }
 

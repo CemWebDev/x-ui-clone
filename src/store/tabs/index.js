@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   main: localStorage.getItem("mainTab") || "for-you",
   notifications: localStorage.getItem("notificationsTab") || "all",
+  explore: localStorage.getItem("exploreTab") || "for-you",
 };
 
 const tab = createSlice({
