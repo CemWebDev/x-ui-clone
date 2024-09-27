@@ -6,7 +6,7 @@ import WhoToFollow from "./WhoToFollow";
 
 const TrendsBar = () => {
   return (
-    <aside className="w-[350px] mx-4 lg:flex flex-col gap-1">
+    <aside className="w-[350px] mx-4 hidden lg:flex flex-col gap-1">
       <SearchBar
         inputPlaceholder="Search"
         popoverContent="Search for people, lists or keywords"
