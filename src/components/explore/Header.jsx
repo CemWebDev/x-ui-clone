@@ -1,5 +1,4 @@
 import HeaderWrapper from "../../helpers/HeaderWrapper";
-import SearchBar from "../UI/SearchBar";
 import { useTab } from "../../store/tabs/hooks";
 import TabItem from "../tabs/TabItem";
 
@@ -7,9 +6,6 @@ const Header = () => {
   const { activeTab, setActiveData } = useTab("explore");
   return (
     <header className="sticky backdrop-blur-md top-0">
-      <div className="w-10/12 mx-auto -mb-2">
-        <SearchBar popoverContent="Search for" inputPlaceholder="Search" />
-      </div>
       <HeaderWrapper>
         <TabItem
           isActive={activeTab === "for-you"}
