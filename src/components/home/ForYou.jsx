@@ -8,12 +8,14 @@ import PostActions from "./PostActions";
 import PostPopover from "./PostPopover";
 import { mockPosts } from "../../constant";
 import { relativeTimeFormat } from "../../utils/format";
+import { FaArrowUpLong } from "react-icons/fa6";
 
 const ForYou = () => {
   const [posts, setPosts] = useState([...mockPosts]);
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
   const sentinelRef = useRef(null);
+  const scrollBtnRef = useRef(null);
   const { activeTab } = useTab();
 
   const loadMore = useCallback(() => {
@@ -52,13 +54,42 @@ const ForYou = () => {
     };
   }, [loadMore, loading]);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        scrollBtnRef.current.classList.remove("hidden");
+        scrollBtnRef.current.classList.add("flex");
+      } else {
+        scrollBtnRef.current.classList.remove("flex");
+        scrollBtnRef.current.classList.add("hidden");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     activeTab === "for-you" && (
       <>
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-4 right-4 w-8 h-8 items-center justify-center bg-[--color-primary] text-white rounded-full hidden"
+          ref={scrollBtnRef}
+          id="scroll-to-top"
+        >
+          <FaArrowUpLong />
+        </button>
         {posts.map((post) => (
           <div
             key={post.id}
-            className="p-1 sm:p-3 border-y border-neutral-500/50 hover-effect"
+            className="p-1 sm:p-3 border-y border-neutral-500/50 hover:bg-[--hover] fade-in"
           >
             <div className="flex gap-2">
               <img
