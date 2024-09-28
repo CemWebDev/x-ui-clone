@@ -9,7 +9,12 @@ const ForYou = () => {
     activeTab === "for-you" && (
       <section>
         <div className="relative">
-          <img src={trends} alt="Trends Event" className="relative -z-10 w-full" />
+          <img
+            src={trends}
+            alt="Trends Event"
+            className="relative -z-10 w-full"
+            loading="lazy"
+          />
           <div className="absolute bottom-4 left-5 text-xl text-white">
             <h1 className="font-semibold">Festival</h1>
             <h1>Music Festival &bull; LIVE</h1>

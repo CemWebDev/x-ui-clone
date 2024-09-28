@@ -19,6 +19,7 @@ const All = () => {
                 src={data.profileImage}
                 alt={data.username}
                 className="w-9 h-9 rounded-full object-cover"
+                loading="lazy"
               />
               <div className="text-[--text-color] text-[.9rem]">
                 <span className="font-medium">{data.username}</span> followed
