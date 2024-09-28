@@ -3,14 +3,15 @@ import { numberFormat } from "../../utils/format";
 import { Popover, PopoverPanel, PopoverButton } from "@headlessui/react";
 import { PiDotsThreeCircle, PiSmileySadThin } from "react-icons/pi";
 
-const TrendingItem = ({ title, category, posts }) => {
+const TrendingItem = ({ title, category, posts, id }) => {
   return (
-    <div>
+    <>
       <button className="w-full flex items-start justify-between px-4 py-2 hover:bg-[--hover] transition-colors">
         <div className="flex flex-col items-start">
-          <span className="text-xs text-[color:var(--text-color-secondary)]">
-            {category}
-          </span>
+          <div className="text-xs text-[color:var(--text-color-secondary)] flex items-center gap-1">
+            {id && <span>{id} ·</span>}
+            <span className="">{category}</span>
+          </div>
           <span className="text-sm font-semibold text-[color:var(--text-color)]">
             #{title}
           </span>
@@ -19,7 +20,7 @@ const TrendingItem = ({ title, category, posts }) => {
           </span>
         </div>
         <Popover className="relative text-[color:var(--text-color)]">
-          <PopoverButton>
+          <PopoverButton className="focus:outline-none">
             <PiDotsThreeCircle className="text-xl hover:text-[color:var(--color-primary)] transition-colors" />
           </PopoverButton>
           <PopoverPanel className="absolute bg-[color:var(--background-primary)] top-0 z-40 right-0 min-w-[300px] shadow-box rounded-xl ">
@@ -34,7 +35,7 @@ const TrendingItem = ({ title, category, posts }) => {
           </PopoverPanel>
         </Popover>
       </button>
-    </div>
+    </>
   );
 };
 
@@ -42,6 +43,7 @@ TrendingItem.propTypes = {
   title: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   posts: PropTypes.number.isRequired,
+  id: PropTypes.number,
 };
 
 export default TrendingItem;
