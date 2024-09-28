@@ -8,7 +8,7 @@ const Profile = () => {
   return (
     <div className="mt-auto">
       <Popover className="relative">
-        <PopoverButton className="mt-3 mb-1 xl:hover:bg-[--hover] transition-colors w-full flex px-2 py-3 rounded-full items-center">
+        <PopoverButton className="mt-3 mb-1 xl:hover:bg-[--hover] transition-colors w-full flex px-2 py-3 rounded-full items-center focus:outline-none">
           <div className="flex items-center gap-1 flex-1">
             <img
               src={account.avatar}
