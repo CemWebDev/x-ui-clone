@@ -80,7 +80,7 @@ const ForYou = () => {
       <>
         <button
           onClick={scrollToTop}
-          className="fixed bottom-4 right-4 w-8 h-8 items-center justify-center bg-[--color-primary] text-white rounded-full hidden"
+          className="fixed  z-50 bottom-4 right-4 w-8 h-8 items-center justify-center bg-[--color-primary] text-white rounded-full hidden"
           ref={scrollBtnRef}
           id="scroll-to-top"
         >
