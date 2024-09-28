@@ -11,12 +11,10 @@ import { numberFormat } from "../../utils/format";
 import { useState } from "react";
 import classNames from "classnames";
 
-const IconWithCount = ({ icon: Icon, count }) => {
-  const [like, setLike] = useState(false);
-
+const IconWithCount = ({ icon: Icon, count, isLiked, handleLikeToggle }) => {
   const handleClick = () => {
     if (Icon === FaRegHeart) {
-      setLike((prevLike) => !prevLike);
+      handleLikeToggle();
     }
   };
 
@@ -34,7 +32,7 @@ const IconWithCount = ({ icon: Icon, count }) => {
         )}
       >
         {Icon === FaRegHeart ? (
-          like ? (
+          isLiked ? (
             <FaHeart className="text-pink-600" />
           ) : (
             <FaRegHeart />
@@ -45,9 +43,9 @@ const IconWithCount = ({ icon: Icon, count }) => {
       </div>
       <span
         className={classNames(
-          "flex items-center justify-center group-hover:text-[--color-primary] transition-colors duration-300",
+          "flex items-center justify-center group-hover:text-[--color-primary] transition-colors duration-300 w-full max-w-6",
           Icon === FaRegHeart ? " group-hover:text-pink-600" : "",
-          like ? "text-pink-600" : ""
+          isLiked ? "text-pink-600" : ""
         )}
       >
         {numberFormat(count)}
@@ -59,14 +57,27 @@ const IconWithCount = ({ icon: Icon, count }) => {
 IconWithCount.propTypes = {
   icon: PropTypes.elementType.isRequired,
   count: PropTypes.number.isRequired,
+  isLiked: PropTypes.bool,
+  handleLikeToggle: PropTypes.func,
 };
 
 const PostActions = ({ likes, retweets, comments, views }) => {
+  const [liked, setLiked] = useState(likes);
+  const [isLiked, setIsLiked] = useState(false);
+  const handleLikeToggle = () => {
+    setIsLiked(!isLiked);
+    setLiked((prevLiked) => (isLiked ? prevLiked - 1 : prevLiked + 1));
+  };
   return (
     <>
       <IconWithCount icon={FaRegComment} count={comments} />
       <IconWithCount icon={FaRetweet} count={retweets} />
-      <IconWithCount icon={FaRegHeart} count={likes} />
+      <IconWithCount
+        icon={FaRegHeart}
+        count={liked}
+        isLiked={isLiked}
+        handleLikeToggle={handleLikeToggle}
+      />
       <IconWithCount icon={FaChartBar} count={views} />
       <div className="flex items-center text-sm gap-2 *:cursor-pointer">
         <span className="hidden sm:flex w-8 h-8 rounded-full hover:text-[--color-primary] items-center justify-center hover:bg-[--color-primary-alpha] transition-colors duration-500">
