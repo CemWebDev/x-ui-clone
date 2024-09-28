@@ -506,3 +506,36 @@ export const notificationData = [
     profileImage: "https://i.pravatar.cc/150?img=5",
   },
 ];
+
+export const trendsForYou = [
+  {
+    id: 1,
+    category: "Sports · Trending",
+    title: "Galatasaray",
+    posts: 12000,
+  },
+  {
+    id: 2,
+    category: "Technology · Trending",
+    title: "Tesla",
+    posts: 8500,
+  },
+  {
+    id: 3,
+    category: "Entertainment · Trending",
+    title: "Netflix",
+    posts: 20000,
+  },
+  {
+    id: 4,
+    category: "Music · Trending",
+    title: "Edis",
+    posts: 15300,
+  },
+  {
+    id: 5,
+    category: "Business · Trending",
+    title: "Amazon",
+    posts: 9000,
+  },
+];

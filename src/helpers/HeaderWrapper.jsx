@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const HeaderWrapper = ({ children, title, className }) => {
   return (
-    <header className={`sticky top-0 z-40 backdrop-blur-lg ${className}`}>
+    <header className={`sticky z-50 top-0 backdrop-blur-lg ${className}`}>
       {title && (
         <h1 className="p-3 cursor-pointer text-xl text-[--text-color] font-medium">
           {title}
