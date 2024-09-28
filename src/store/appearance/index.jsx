@@ -15,6 +15,7 @@ const initialState = {
   boxShadow:
     "rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1px",
   fontSize: 16,
+  hover: "#e7e9ea1a",
 };
 
 const loadTheme = () => {
@@ -45,10 +46,19 @@ const appearance = createSlice({
       state.fontSize = action.payload;
       localStorage.setItem("appearance", JSON.stringify(state));
     },
+    _setHover: (state, action) => {
+      state.hover = action.payload;
+      localStorage.setItem("appearance", JSON.stringify(state));
+    },
   },
 });
 
-export const { _setBackgroundColor, _setColor, _setFontSize, _setBoxShadow } =
-  appearance.actions;
+export const {
+  _setBackgroundColor,
+  _setColor,
+  _setFontSize,
+  _setBoxShadow,
+  _setHover,
+} = appearance.actions;
 
 export default appearance.reducer;

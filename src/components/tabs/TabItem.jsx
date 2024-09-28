@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const TabItem = ({ children, isActive, onClick }) => {
   return (
     <button
-      className="flex-auto font-semibold text-center hover-effect"
+      className="flex-auto font-semibold text-center hover:bg-[--hover]"
       type="button"
       onClick={onClick}
     >

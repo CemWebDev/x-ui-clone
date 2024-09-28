@@ -6,6 +6,7 @@ export const themes = [
     textColorSecondary: "rgb(83, 100, 113)",
     backgroundPrimary: "#fff",
     backgroundSecondary: "#eff3f4",
+    hover: "#0f14191a",
   },
   {
     name: "dim",
@@ -14,6 +15,7 @@ export const themes = [
     textColorSecondary: "#8b98a5",
     backgroundPrimary: "#15202b",
     backgroundSecondary: "#273340",
+    hover: "#e7e9ea1a",
   },
   {
     name: "dark",
@@ -22,5 +24,6 @@ export const themes = [
     textColorSecondary: "rgb(113, 118, 123)",
     backgroundPrimary: "#000",
     backgroundSecondary: "#202327",
+    hover: "#e7e9ea1a",
   },
 ];

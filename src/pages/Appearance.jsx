@@ -6,6 +6,7 @@ import {
   setBackgroundColor,
   setFontsize,
   setBoxShadow,
+  setHover,
 } from "../store/appearance/actions";
 import ThemeButton from "../components/UI/ThemeButton";
 import { themes } from "../themes";
@@ -14,7 +15,7 @@ import { IoMdCheckmark } from "react-icons/io";
 import { useState } from "react";
 
 const Appearance = () => {
-  const { backgroundColor, color, fontSize, boxShadow } = useAppearance();
+  const { backgroundColor, color, fontSize } = useAppearance();
   const [selectedFontSizeIndex, setSelectedFontSizeIndex] = useState(
     fontSizes.indexOf(fontSize)
   );
@@ -29,7 +30,7 @@ const Appearance = () => {
       <div className="pt-2 pl-4">
         <h1 className="flex items-center gap-10 text-xl text-[color:var(--text-color)]">
           <NavLink
-            className="w-8 h-8 relative flex items-center justify-center hover-effect rounded-full group"
+            className="w-8 h-8 relative flex items-center justify-center hover:bg-[--hover] rounded-full group"
             to="/settings/display"
           >
             <IoArrowBack />
@@ -147,6 +148,7 @@ const Appearance = () => {
                   setBoxShadow(
                     "rgba(101, 119, 134, 0.2) 0px 0px 15px, rgba(101, 119, 134, 0.15) 0px 0px 3px 1px"
                   );
+                  setHover(theme.hover);
                 }}
               />
             ))}

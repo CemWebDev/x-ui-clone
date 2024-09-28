@@ -6,7 +6,7 @@ const PopoverPanelContent = ({ icon: Icon, text, path }) => {
 
   return (
     <button
-      className="flex w-full hover-effect items-center pl-3 gap-5 justify-start h-14"
+      className="flex w-full hover:bg-[--hover] items-center pl-3 gap-5 justify-start h-14"
       onClick={() => path && navigate(path)}
     >
       <Icon className="text-2xl" />

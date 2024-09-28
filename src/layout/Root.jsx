@@ -7,8 +7,6 @@ import { useAppearance } from "../store/appearance/hooks";
 const Root = () => {
   const appearance = useAppearance();
 
-  console.log(appearance);
-
   useEffect(() => {
     document.documentElement.style.setProperty(
       "--background-primary",
@@ -53,6 +51,8 @@ const Root = () => {
       "--font-size",
       appearance.fontSize + "px"
     );
+
+    document.documentElement.style.setProperty("--hover", appearance.hover);
   }, [appearance]);
 
   const location = useLocation();

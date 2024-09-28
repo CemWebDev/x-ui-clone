@@ -6,8 +6,8 @@ import { morePopoverLinks } from "../../../constant";
 const MorePopover = ({ icon: Icon }) => {
   return (
     <Popover className="relative outline-none">
-      <PopoverButton className="block text-start">
-        <div className="inline-flex items-center gap-4 p-2.5 rounded-full hover-effect">
+      <PopoverButton className="inline-flex text-start w-full group">
+        <div className="inline-flex items-center group-hover:bg-[--hover] gap-4 p-2.5 rounded-full">
           <Icon className="text-2xl" />
           <span className="hidden xl:block text-xl">More</span>
         </div>

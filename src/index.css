@@ -12,18 +12,23 @@ body {
   @apply bg-[color:var(--background-primary)] text-[0.938rem];
 }
 
-.hover-effect {
-  @apply hover:bg-neutral-600/40 transition-colors;
-}
-
-.group-hover-effect {
-  @apply group-hover:bg-neutral-600/40 transition-colors;
-}
-
 .shadow-box {
   box-shadow: var(--box-shadow);
 }
 
 .header-layout {
   @apply -mt-2 min-h-screen;
+}
+.fade-in {
+  animation: fadeInUp 0.5s ease-in-out forwards;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

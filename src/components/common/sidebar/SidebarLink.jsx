@@ -19,7 +19,7 @@ const SidebarLink = ({ text, icon: Icon, notification, path, id }) => {
   return (
     <li className={`w-full ${shouldHide ? "hidden" : ""}`}>
       <NavLink className="block group" {...(path ? { to: path } : {})}>
-        <div className="inline-flex  items-center gap-4 group-hover-effect rounded-full p-2.5 transition-colors relative">
+        <div className="inline-flex  items-center gap-4 group-hover:bg-[--hover] rounded-full p-2.5 transition-colors relative">
           <div className="relative">
             {notification && (
               <div className="absolute w-[18px] h-[18px] -right-1 -top-1.5 bg-[color:var(--color-primary)] text-white flex items-center justify-center text-xs rounded-full">

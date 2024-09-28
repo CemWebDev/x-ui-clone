@@ -29,7 +29,7 @@ const Display = () => {
               <NavLink
                 to={link.path}
                 key={link.id}
-                className="flex sm:h-[4.5rem] items-center hover-effect transition-colors"
+                className="flex sm:h-[4.5rem] items-center hover:bg-[--hover] transition-colors"
               >
                 <div className="w-16 flex items-center justify-center">
                   <link.icon className="text-[color:var(--text-color-secondary)] text-xl" />

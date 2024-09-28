@@ -11,7 +11,7 @@ const WhoToFollow = () => {
       {whoToFollow.map((user) => (
         <SuggestedFollow key={user.id} user={user} />
       ))}
-      <NavLink className="text-[color:var(--color-primary)] block px-4 mt-2 text-sm py-2.5 hover-effect text-start">
+      <NavLink className="text-[color:var(--color-primary)] block px-4 mt-2 text-sm py-2.5 hover:bg-[--hover] text-start">
         Show more
       </NavLink>
     </div>

@@ -6,7 +6,7 @@ import { PiDotsThreeCircle, PiSmileySadThin } from "react-icons/pi";
 const TrendingItem = ({ title, category, posts }) => {
   return (
     <div>
-      <button className="w-full flex items-start justify-between px-4 py-2 hover-effect transition-colors">
+      <button className="w-full flex items-start justify-between px-4 py-2 hover:bg-[--hover] transition-colors">
         <div className="flex flex-col items-start">
           <span className="text-xs text-[color:var(--text-color-secondary)]">
             {category}

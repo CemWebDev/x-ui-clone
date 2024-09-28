@@ -35,7 +35,7 @@ const Settings = () => {
                 to={link.href}
                 key={link.id}
                 className={({ isActive }) =>
-                  `w-full transition-colors flex text-[color:var(--text-color)] items-center justify-between border-r-2 p-3.5 hover-effect ${
+                  `w-full transition-colors flex text-[color:var(--text-color)] items-center justify-between border-r-2 p-3.5 hover:bg-[--hover] ${
                     isActive ? " border-[color:var(--color-primary)]" : "border-transparent"
                   }`
                 }

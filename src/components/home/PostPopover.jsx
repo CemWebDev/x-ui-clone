@@ -9,7 +9,7 @@ const PostPopover = ({ username }) => {
       {items.map((item) => (
         <button
           key={item.id}
-          className="w-full hover-effect py-3 px-1.5 gap-2 text-[--text-color] font-medium flex items-center"
+          className="w-full hover:bg-[--hover] py-3 px-1.5 gap-2 text-[--text-color] font-medium flex items-center"
         >
           <item.icon />
           {item.text}
