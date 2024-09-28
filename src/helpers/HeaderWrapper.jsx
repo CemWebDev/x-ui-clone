@@ -15,7 +15,7 @@ const HeaderWrapper = ({ children, title, className }) => {
 
 HeaderWrapper.propTypes = {
   children: PropTypes.node.isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   className: PropTypes.string,
 };
 
