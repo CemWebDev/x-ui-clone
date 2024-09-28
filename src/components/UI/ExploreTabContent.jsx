@@ -14,7 +14,7 @@ const ExploreTabContent = ({
     isActive && (
       <section>
         {tabTitle && (
-          <h1 className="text-white text-xl font-semibold p-2">{tabTitle}</h1>
+          <h1 className="text-[--text-color] text-xl font-semibold p-2">{tabTitle}</h1>
         )}
         {isFeatured && (
           <div className="relative">
